@@ -4,9 +4,9 @@ process.env.BABEL_ENV = 'main'
 
 const path = require('path')
 const { dependencies } = require('../package.json')
-const webpack = require('webpack')
+const webpack = require('./node_modules/webpack')
 
-const BabiliWebpackPlugin = require('babili-webpack-plugin')
+const BabiliWebpackPlugin = require('./node_modules/babili-webpack-plugin')
 
 let mainConfig = {
   entry: {
@@ -24,7 +24,7 @@ let mainConfig = {
         use: {
           loader: 'eslint-loader',
           options: {
-            formatter: require('eslint-friendly-formatter')
+            formatter: require('./node_modules/eslint-friendly-formatter')
           }
         }
       },

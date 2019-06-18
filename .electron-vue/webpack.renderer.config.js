@@ -4,13 +4,13 @@ process.env.BABEL_ENV = 'renderer'
 
 const path = require('path')
 const { dependencies } = require('../package.json')
-const webpack = require('webpack')
+const webpack = require('./node_modules/webpack')
 
-const BabiliWebpackPlugin = require('babili-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { VueLoaderPlugin } = require('vue-loader')
+const BabiliWebpackPlugin = require('./node_modules/babili-webpack-plugin')
+const CopyWebpackPlugin = require('./node_modules/copy-webpack-plugin')
+const MiniCssExtractPlugin = require('./node_modules/mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('./node_modules/html-webpack-plugin')
+const { VueLoaderPlugin } = require('./node_modules/vue-loader')
 
 /**
  * List of node_modules to include in webpack bundle
@@ -38,7 +38,7 @@ let rendererConfig = {
         use: {
           loader: 'eslint-loader',
           options: {
-            formatter: require('eslint-friendly-formatter')
+            formatter: require('./node_modules/eslint-friendly-formatter')
           }
         }
       },

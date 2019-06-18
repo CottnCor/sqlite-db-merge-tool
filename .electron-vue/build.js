@@ -2,12 +2,12 @@
 
 process.env.NODE_ENV = 'production'
 
-const { say } = require('cfonts')
-const chalk = require('chalk')
-const del = require('del')
+const { say } = require('./node_modules/cfonts')
+const chalk = require('./node_modules/chalk')
+const del = require('./node_modules/del')
 const { spawn } = require('child_process')
-const webpack = require('webpack')
-const Multispinner = require('multispinner')
+const webpack = require('./node_modules/webpack')
+const Multispinner = require('./node_modules/multispinner')
 
 
 const mainConfig = require('./webpack.main.config')

@@ -3,13 +3,13 @@
 process.env.BABEL_ENV = 'web'
 
 const path = require('path')
-const webpack = require('webpack')
+const webpack = require('./node_modules/webpack')
 
-const BabiliWebpackPlugin = require('babili-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { VueLoaderPlugin } = require('vue-loader')
+const BabiliWebpackPlugin = require('./node_modules/babili-webpack-plugin')
+const CopyWebpackPlugin = require('./node_modules/copy-webpack-plugin')
+const MiniCssExtractPlugin = require('./node_modules/mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('./node_modules/html-webpack-plugin')
+const { VueLoaderPlugin } = require('./node_modules/vue-loader')
 
 let webConfig = {
   devtool: '#cheap-module-eval-source-map',
@@ -25,7 +25,7 @@ let webConfig = {
         use: {
           loader: 'eslint-loader',
           options: {
-            formatter: require('eslint-friendly-formatter')
+            formatter: require('./node_modules/eslint-friendly-formatter')
           }
         }
       },
