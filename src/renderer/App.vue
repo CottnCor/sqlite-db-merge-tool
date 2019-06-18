@@ -6,8 +6,8 @@
 
 <script>
   export default {
-    name: 'sqlite-db-merge-tool'
-  }
+    name: 'sqlite-db-merge-tool',
+  };
 </script>
 
 <style>
